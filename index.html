@@ -6,16 +6,116 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:300' rel='stylesheet' type='text/css'>
 
   <script></script>
-  <style></style>
+  <style>
+  body{
+    font-size:14pt;
+    font-family: 'Hind Vadodara', sans-serif;
+    background: url("./resources/background.jpg")center 0px no-repeat fixed;
+    background-size: cover;
+
+    height:100vh;
+  }
+  .jumbotron{
+    background-color: rgba(255, 255, 255, 0.0);
+    color: black;
+    padding-top: 100px;
+    margin-top: 50px;
+
+  }
+
+  .bg-1 {
+    background-color:rgba(255, 255, 255, .5);
+    color:white;
+    margin-top:50px;
+    padding-bottom:60px;
+  }
+
+  .bg-2{
+    background-color:#2b8cbc;
+    color:white;
+  }
+
+  .bg-3{
+    background-color: #C7414F;
+    color:white;
+  }
+
+  .bg-4{
+    background-color:#6F6C14;
+    color:white;
+  }
+
+  </style>
 
 </head>
 
 <body>
   <div class="container-fluid">
-  <h1>I am the Best</h1>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+         <div class="navbar-header">
+             <a class="navbar-brand" href="./index.html">Miles Merwin</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="./index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./research.html">Meetup Research</a></li>
+                <li><a href="#">Placeholder</a></li>
+              </ul>
+        </li>
+
+      </ul>
+			</div>
+		</div>
+ </nav>
 </div>
 
+<div class="container-fluid bg-1" >
+  <div class="jumbotron text-center"style="min-height:150px">
+    <a href="./about.html" style="color:inherit; text-decoration:none"><h1>Miles <font color="#2b8cbc"> Merwin</font></h1></a>
+    <p>Design <font color="#2b8cbc">•</font> UX <font color="#2b8cbc">•</font> Research</p>
+  </div>
+
+
+</div>
+
+  <div class="container-fluid bg-2 text-center">
+    <h2>About Me</h2>
+    <div class="row">
+      <div class="col-sm-1"></div>
+  <div class="col-sm-5"  <p>My name is Miles, and I am a UX Designer living in San Jose, CA.</p>
+    <p>I have held positions in sales, social work, auto mechanics, cooking, social media, and psychology, and use this wide range of
+    knowledge to bring meaningful insights to web and mobile platforms.</p></div>
+    <div class="col-sm-5">
+    <p>My goal is to help people navigate the evolving digital landscape by designing meaningful experiences for users.</p>
+    <p>I enjoy building and flying drones, track days, martial arts, tinkering, and technology.</p></div>
+</div>
+<div class="col-sm-1"></div>
+  </div>
+
+  <div class="container-fluid bg-3 text-center">
+      <h3> What do I do?</h3>
+      <p>Lots of UX experience with prototypes, etc.</p>
+  </div>
+
+  <div class="container-fluid bg-4 text-center">
+    <h1>Contact or maybe a footer</h1>
+  </div>
 
 </body>
