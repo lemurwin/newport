@@ -7,6 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:300' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/fbbc7a65d4.js"></script><link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:300' rel='stylesheet' type='text/css'>
+
 
   <script></script>
   <style>
@@ -17,6 +19,10 @@
     background-size: cover;
 
     height:100vh;
+  }
+
+  .navbar{
+    background-color: ;
   }
   .jumbotron{
     background-color: rgba(255, 255, 255, 0.0);
@@ -34,24 +40,33 @@
   }
 
   .bg-2{
-      background-color:#2b8cbc;
-    color:white;
+      background-color:white;
+    color:#222;
 
   }
 
   .bg-3{
-    background-color: #C7414F;
+    background-color:#4E7D94;
     color:white;
   }
 
   .bg-4{
-    background-color:#6F6C14;
-    color:white;
+    background-color:white;
+    color:#222;
+  }
+  .bg-5{
+    background-color:#222;
+  }
+  h2{
+    font-weight:bold;
   }
 h3{
   text-decoration: underline;
   padding-bottom:10px;
   font-size:1.5em;
+}
+footer{
+  background-color:#222;
 }
   </style>
 
@@ -80,7 +95,7 @@ h3{
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="./research.html">Meetup Research</a></li>
+                <li><a href="./meetup.html">Meetup Research</a></li>
                 <li><a href="#">Placeholder</a></li>
               </ul>
         </li>
@@ -101,21 +116,19 @@ h3{
 </div>
 
   <div class="container-fluid bg-2 text-center">
-    <h2>About Me</h2>
-    <div class="row" style="border-top:1px solid white; padding-top: 10px">
-      <div class="col-sm-1"></div>
-  <div class="col-sm-5" ><p>My name is Miles Merwin, and I am a UX Designer living in San Jose, California.</p>
-    <p>I have held positions in  social work, sales, mechanics, cooking, social media, and psychology, and use this wide range of
-    knowledge and experience to bring meaningful insights to web and mobile platforms.</p></div>
-    <div class="col-sm-5">
+    <div class="row" style="padding-bottom:10px"><h2>About Me</h2></div>
+    <div class="row text-justify" style="border-top:1px solid black; padding-top: 15px; line-height:1.7em">
+<div class="col-sm-3"></div><div class="col-sm-6" >
+  <p>My name is Miles Merwin, and I am a UX Designer who loves making things easier for people.</p>
+    <p>Since 2011, I've worked first hand with people from all walks of life to create meaningful and collaborative experiences.</p>
+
     <p>My goal is to help people navigate the evolving digital landscape by designing meaningful and pleasant experiences for users.</p>
-    <p>I enjoy building and flying drones, track days, martial arts, tinkering, and technology.</p></div>
 </div>
 <div class="col-sm-1"></div>
   </div>
-
-  <div class="container-fluid bg-3 text-center">
-      <h2 style="padding-bottom:10px">What do I do?</h2>
+</div>
+  <div class="container-fluid bg-3 text-center" style="border-top:1px solid black">
+      <h2 style="padding-bottom:10px">What Can I do for You?</h2>
       <p></p>
       <div class="row">
         <div class="col-sm-4" style="border-top:1px solid white">
@@ -136,10 +149,10 @@ h3{
             <p>Content strategy</p>
 
           <img src="./resources/leanux.png" width="80px" height="80px" class="img-circle">
-          <p>Lean ux</p>
+          <p>Lean UX</p>
 
           <img src="./resources/mobile.png" width="80px" height="80px" class="img-circle">
-          <p>Mobile first web</p></div>
+          <p>Mobile</p></div>
         <div class="col-sm-4" style="border-top:1px solid white">
         <h3>Deliverables</h3>
           <img src="./resources/wireframe.png" width="80px" height="80px" class="img-circle">
@@ -152,21 +165,51 @@ h3{
   </div>
 </div>
 
-<div class="container-fluid bg-4 text-center">
-  <h2>Projects</h2>
+<div class="container-fluid bg-4 text-center" >
+    <div class="row" style="padding-bottom:10px"><h2>Projects</h2></div>
+
+  <div class="row" style="border-top:1px solid black; padding-top: 25px">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        <a href="https://medium.com/@lemurwin/springboard-capstone-project-f6c48f2ce897"><img src="./resources/mainmeet.png" width="100%" height="auto"></a>
+        <p><a href="https://medium.com/@lemurwin/springboard-capstone-project-f6c48f2ce897" style="text-decoration:none; color:#222">Meetup.com Capstone Project</a></p></div>
+    <div class="col-sm-5">
+        <a href="./meetup.html"><img src="./resources/mainmeet.png" width="100%" height="auto"></a>
+        <p><a href="https://medium.com/@lemurwin/springboard-capstone-project-f6c48f2ce897" style="text-decoration:none; color:#222">Meetup.com Capstone Project</a></p></div>
+
+</div>
+
+</div>
+<footer >
+<div class="container-fluid bg-5">
+  <div class="row" style="padding-top:10px">
+    <div class="col-md-2"></div>
+    <div class="col-md-4" style="text-align:center"><p style="color:white;">&copy;Miles Merwin 2017</p></div>
+    <div class="col-md-2" style="text-align:center"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/"><i class="fa fa-linkedin" aria-hidden="true>"></i> LinkedIn</a></p></div>
+    <div class="col-md-2" style="text-align:center"><p><a href="https://www.facebook.com/merwin.miles"><i class="fa fa-facebook-official" aria-hidden="true>"></i> Facebook</a></p></div>
+  </div>
 
   <div class="row">
-    <div class="col-sm-4">
-        <a href="https://medium.com/@lemurwin/springboard-capstone-project-f6c48f2ce897"><img src="./resources/mainmeet.png" width="100%" height="auto"></a>
-        <p><a href="https://medium.com/@lemurwin/springboard-capstone-project-f6c48f2ce897" style="text-decoration:none; color:white">Meetup.com Capstone Project</a></p></div>
-    <div class="col-sm-4"><div style="background-color:white; height:120px; width:240px"></div></div>
-    <div class="col-sm-4"><div style="background-color:white; height:120px; width:240px"></div></div>
-</div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2" style="text-align:center"><p><a href="https://www.github.com/lemurwin"><i class="fa fa-github" aria-hidden="true>"></i> Github</a></p></div>
+    <div class="col-md-2" style="text-align:center"><p><a href="https://www.instagram.com/godofsmiles"><i class="fa fa-instagram" aria-hidden="true>"></i> Instagram</a></p></div>
+      </div>
 
-</div>
 
-  <div class="container-fluid bg-4 text-center">
-    <h1>Contact or maybe a footer</h1>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2"></div>
+    <div class="col-md-2" style="text-align:center"><p><a href="https://www.twitter.com/godofsmiles"><i class="fa fa-twitter-square" aria-hidden="true>"></i> Twitter</a></p></div>
+    <div class="col-md-2" style="text-align:center"><p><a href="https://merwinmiles.wordpress.com"><i class="fa fa-wordpress" aria-hidden="true"></i> Wordpress</a></p></div>
+
+  </div>
+</div>
+</footer>
+  <div class="container-fluid bg-5 text-center" >
+    <h1 style="color:white">Contact or maybe a footer</h1>
   </div>
 
 </body>
