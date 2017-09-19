@@ -16,9 +16,11 @@
 
   </script>
   <style>
-
+html{
+  font-size:16px;
+}
   body{
-    font-size:14pt;
+    font-size:1.2em;
     font-family: 'Hind Vadodara', sans-serif;}
     #nav{
       padding:0px 30px;
@@ -28,10 +30,48 @@
     }
     h2{
       font-weight:600;
+      border-bottom:1px solid black;
     }
+    h3{
+      font-weight:600;
+
+    }
+
     p{
       font-weight:300;
+      line-height: 1.6;
     }
+    @media only screen and (min-width:992px) {
+      .modal-image{
+        width:60%;
+        margin-left:20%;
+      }
+    }
+    .modal-image{
+      margin-top:55px;
+      margin-bottom:50px;
+    }
+    .test {
+      height: 400px;
+      background:url("./resources/friends.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      }
+    .test1 {
+      height: 400px;
+      background:url("./resources/logosbackground.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      }
+
+      blockquote{
+        font-size: 1.3em;
+      }
+
+
+
   </style>
 
 
@@ -68,11 +108,14 @@
       </div>
    </nav>
   </div>
+
   <div class="container-fluid" style="margin-top:50px">
     <div class="row" style="background-color:white; padding-bottom:20px; padding-top:10px">
       <div class="col-md-2"></div>
-    <div class="col-md-6"><h1 style="color:black">Springboard Capstone Project</h1><p style="color:black">A Friendly Addition to Meetup.com</div>
+    <div class="col-md-6"><h1 style="color:black">Springboard Capstone Project</h1>
+      <p style="color:black">A Friendly Addition to Meetup.com</div>
   </div>
+</div>
 
   <div class="container-fluid text-center"style="padding-top:20px">
     <div class="row">
@@ -84,9 +127,16 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-6"><h2>An Introduction to the Problem</h2>
+        <div class="col-md-8"><h2>An Introduction to the Problem</h2>
         </div>
       </div>
+    </div>
+
+
+
+
+
+<div class="container-fluid">
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -94,7 +144,7 @@
       People use it to deepen their professional skills, explore personal interests,
       and generally to socialize with people nearby that have similar interests.</p>
 
-        <p>Meetup’s tagline is<em>“Find your people”</em>, which I have done, however, after
+        <p>Meetup’s tagline is <em>“Find your people”</em>, which I have done, however, after
           attending a few of these events, I realized that there isn’t a great way to
           stay connected to the people I meet at events. There <em>is</em> a minimal messaging system,
           but in order to connect with someone on a social network,
@@ -111,31 +161,283 @@
          someone from your email contact list.</p>
        </div>
      </div>
-   </div>
-
-   <div class="container-fluid" style="padding-top:60px">
-     <div class="row text-center">
-       <div class="col-md-2"></div>
-       <div class="col-md-8"><img src="./resources/friends.jpeg" witdh="100%"></div>
-     </div>
+</div>
 
 
+<div class="test" style="background-attachment: fixed;">
+  <div style="background-color:rgba(255, 255, 255, .7); width:100%; height:100%;"></div></div>
+
+
+       <!-- MODAL TESTING AREA -->
+<!--
+       <div id="friendModal" class="modal custom fade" role="dialog">
+         <div class="modal-image" style="">
+
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+             </div>
+
+             <div class="modal-body">
+               <p>People at a Meetup</p>
+               <img src="./resources/friends.jpeg" width="100%">
+
+             </div>
+
+             <div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+             </div>
+           </div>
+         </div>
+
+
+       </div>
+-->
+
+<div class="container-fluid">
      <div class="row">
        <div class="col-md-2"></div>
-       <div class="col-md-6"><h2>A Potential Solution</h2>
+       <div class="col-md-8"><h2>A Potential Solution</h2>
        </div>
      </div>
 
      <div class="row">
        <div class="col-md-3"></div>
-       <div class="col-md-6"><p>So let’s bring all this multi-platform hullabaloo
-         back into one platform. By allowing people to “friend” each other on Meetup,
+       <div class="col-md-6"><p>I sought to address this this multi-platform hullabaloo
+         by bringing everything back into one platform.
+         By allowing people to “friend” each other on Meetup,
          users would be encouraged to stay within the framework for events,
-         networking, and communication. Additionally, it would allow people to
+         networking, and communication. It would subsequently allow people to
          view their friends’ Meetup groups and interests, which would encourage
          exploration of interests one might not necessarily explore on his/her own.</p>
-         
+       </div>
+     </div>
 
-   </div>
+     <div class="row">
+       <div class="col-md-2"></div>
+       <div class="col-md-8"><h2>Research (Surveys and Interviews)</h2></div>
+     </div>
+     <div class="row">
+       <div class="col-md-3"></div>
+       <div class="col-md-6"><p>To validate this theory, we need some evidence.
+          I started by recruiting volunteers across a variety of social networking
+          platforms including Meetup, Facebook, Reddit, and LinkedIn. With 28
+          survey respondents and 5 interviewees, the data was eye-opening. Of
+          those who took the survey, everyone had used some form of social
+          network for longer than 3 years. Over 89% of respondents reported both
+          using social media multiple times per day and using social networking
+          to find an event at least once a month. That’s a lot of socializing!</p></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><a data-toggle="modal" href="#friendModal0"><img src="./resources/infoprev.png" width="100%"></a><p class="text-center">Survey Results Infographic</p></div>
+    </div>
+
+<!-- Modal Infographic -->
+
+    <div id="friendModal0" class="modal fade" role="dialog">
+      <div class="modal-image" style="">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <div class="modal-body text-center">
+            <p>Survey Results</p>
+            <img src="./resources/infographic.png" width="100%">
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--
+    End Infographic
+  -->
+</div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h3>Interviews for Qualitative Data</h3></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><p>For my interviews, I chose mainly people who
+        responded that they used or had heard of Meetup, and were in the
+        demographic of social network users. All 4 of the 18–34 interviewees
+        reported finding it difficult to meet new friends and socialize after
+        college. Interestingly, the one older user (55–64) I interviewed said
+        that she didn’t have a need nor want for more friends.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><blockquote><em>“I’m a little cautious about adding
+        people to my Facebook… It’s very difficult to go back in and delete all
+        these stupid things that have been posted over the years… So I decided
+        to start fresh with a new Facebook account.”</em></blockquote></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><p>Something that came up among all the younger
+        (read: millenial) population was a nervousness or fear of new friends
+        and professionals seeing incriminating photos that they might have been
+        tagged in during their younger years. Some opted to create entirely new
+        accounts or risk using Facebook by changing their security settings.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><blockquote><em>“I don’t even accept LinkedIn
+        requests unless I can personally vouch for their professional
+        qualifications.”</em></blockquote></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><p>Another issue with connecting with people arose
+        from LinkedIn. Two of the millenial interviewees reported feeling
+        intimidated to start casual conversations on a “professional” platform,
+        while the older respondent reported that she wouldn’t even connect with
+        a person if she couldn’t vouch for his/her skill because she viewed the
+        platform as a digital resumé.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><h3>Interview Takeaways</h3></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><p>When I explored the issues further, I found that
+        all the interviewees used social networks as vetting tools when meeting
+        someone new and needed some background information. Existing platforms
+        were either too personal or too professional. This is where Meetup can
+        fill a niche opening in social networking with a casual, public-facing
+        profile system that people will feel comfortable connecting with strangers on.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="test1" style="background-attachment: fixed;">
+    <div style="background-color:rgba(255, 255, 255, .7); width:100%; height:100%;"></div></div>
+
+  <div class="container-fluid" >
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>Heuristic Analysis</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6" style="background-color:white;">
+        <p>Ease of use is a huge factor in keeping users happy, and as such,
+          comparing the existing platform with its competitors was important in
+          the development of new features because users will already be
+          familiar with their use.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <h3>Meetup.com</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <p>Meetup has some minor issues with its usability that break the
+          pattern of general web use. For example, below, the widely accepted
+          “logo in the top left is home” pattern is ignored, and has been
+          placed in the middle of the navigation bar.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <p>However, Meetup does have a strong match between other existing
+          patterns, such as calendar view, page consistency across the site,
+          and well-labeled actions and buttons. Finding and attending events is
+          very easy with large buttons and accessible, understandable language.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <h3>Other Platforms</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <p>In order to gauge Meetup’s competitiveness with other platforms, I
+          analyzed a few other well-known players, including <b>Facebook</b> and
+          <b>Eventbrite</b>, as well as a lesser-known platform, <b>CitySocializer</b>.</p>
+        <p>Surprisingly, for as popular Facebook is among users, it has some
+          poor heuristics in its events finding function. Most noticeably,
+          navigating to different subcategories reveals inconsistent sort
+          methods where the parameters for sorting were not immediately transparent.</p>
+        <p>Eventbrite, on the other hand, was very strong in error prevention
+          and recovering from errors, and had strong flexibility for users by
+          offering the ability to sort events in many different ways.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <h2>Empathy Maps, Personas, and Scenarios</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <h3>Differentiating Users</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <p>After going through the data from the research, I found enough
+          common features between the users to generate three different personas:
+          <b>Paul Professional</b>, <b>Sally Socializer</b>, and <b>Hank Hobbyist</b>.
+          Paul is someone who attends events mainly to expand his professional skills,
+          Sally attends to see friends and explore her area, and Hank attends
+          meetups to try out new hobbies.</p>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:20px;">
+      <div class="col-md-2"></div>
+      <div class="col-md-8"><img src="./resources/sallypersona.png" width="100%"></div>
+
+    </div>
+
+  </div>
 
   </body>
