@@ -82,6 +82,31 @@ html{
         font-size: 1.3em;
         font-style:italic;
       }
+      footer{
+        background-color:#222;
+        margin-top:25px;
+      }
+      h2:before {
+        display: block;
+        content: " ";
+        margin-top: -50px;
+        height: 50px;
+        visibility: hidden;
+      }
+
+      h3:before {
+        display: block;
+        content: " ";
+        margin-top: -50px;
+        height: 50px;
+        visibility: hidden;
+      }
+      @media only screen and (max-width:992px) {
+        footer p{
+          font-size: .75em;
+        }
+
+      }
 
 
 
@@ -106,14 +131,14 @@ html{
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="./index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li class="dropdown">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li class="dropdown active">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="./meetup.html">Meetup Research</a></li>
-                  <li><a href="#">Placeholder</a></li>
+                  <li><a href="./meetup.html">Springboard Capstone Project</a></li>
+
                 </ul>
           </li>
 
@@ -150,7 +175,7 @@ html{
 
 
 
-<div class="container-fluid">
+<div class="container-fluid" >
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
@@ -229,11 +254,12 @@ html{
      </div>
      <div class="row">
        <div class="col-md-2"></div>
-       <div class="col-md-8"><h2>Research (Surveys and Interviews)</h2></div>
+       <div class="col-md-8" id="Research"><h2>Research (Surveys and Interviews)</h2></div>
      </div>
      <div class="row">
        <div class="col-md-3"></div>
        <div class="col-md-6">
+         <h3 id="Survey">Anonymous Survey</h3>
          <p>To validate this theory, we need some evidence.
             I started by recruiting volunteers across a variety of social networking
             platforms including Meetup, Facebook, Reddit, and LinkedIn. With 28
@@ -282,7 +308,7 @@ html{
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-      <h3>Interviews for Qualitative Data</h3>
+      <h3 id="Interviews">Interviews for Qualitative Data</h3>
         <p>For my interviews, I chose mainly people who
           responded that they used or had heard of Meetup, and were in the
           demographic of social network users. All 4 of the 18–34 interviewees
@@ -378,7 +404,7 @@ html{
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <h3>Differentiating Users</h3>
+        <h3 id="Personas">Differentiating Users</h3>
       </div>
     </div>
 
@@ -437,7 +463,7 @@ html{
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-2"></div>
-      <div class="col-md-8"><h2>A Minimum Viable Product</h2></div>
+      <div class="col-md-8"><h2 id="LeanUX">A Minimum Viable Product</h2></div>
     </div>
 
     <div class="row">
@@ -450,7 +476,7 @@ html{
 
     <div class="row">
       <div class="col-md-3"></div>
-      <div class="col-md-6"><h3>User Stories and the MVP</h3>
+      <div class="col-md-6"><h3 >User Stories and the MVP</h3>
 
         <p>Once I discovered my Personas, I could use their
         motivations to guide what features an MVP would need, and how each persona
@@ -473,7 +499,7 @@ html{
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <h2>Information Architecture and User Flows</h2>
+        <h2 id="ContentStrategy">Information Architecture and User Flows</h2>
         </div>
     </div>
 
@@ -535,7 +561,7 @@ html{
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          <h3>Initial Wireframes</h3>
+          <h3 id="Wireframes">Initial Wireframes</h3>
           <p>Because Meetup already has a basic profile, I started designing
             from the existing layout to facilitate a smooth transition and site
             homogeneity.</p>
@@ -563,7 +589,7 @@ html{
             Interests, and a Bulletin Board. This resulted in a cleaner,
             easily navigable layout that doesn’t distract the user’s eye.</p>
 
-          <h3>Building a Prototype</h3>
+          <h3 id="Prototyping">Building a Prototype</h3>
           <p>Because this project was based on an existing platform, I was able
             to streamline much of the process by using screenshots of the
             existing platform and photoshopping in some of the features. Once
@@ -629,7 +655,7 @@ html{
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-8"><h2>Testing the Prototype</h2></div>
+    <div class="col-md-8"><h2 id="UserTesting">Testing the Prototype</h2></div>
   </div>
 
   <div class="row">
@@ -651,7 +677,7 @@ html{
         result, two of the subjects were immediately baffled by the landing page
         that would appear after a login and set a poor first impression in the test.</p>
 
-      <h2>Learning from Errors</h2>
+      <h3>Learning from Errors</h3>
 
       <p>However, this confusion provided a great learning insight into first
         time users. All the participants, feeling confused by the landing page,
@@ -680,6 +706,90 @@ html{
 
       </div>
     </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <h2>Takeaways and Further Testing</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <p>In conclusion, the data indicates that there is a strong fit for
+            an improved profile/person-to-person network. By implementing
+            existing social network patterns for organizing profile data,
+            Meetup could add a great deal of social functionality without
+            much user confusion. By improving users’ ability to connect with
+            other users, Meetup would encourage more time spent on the platform
+            and promote platform activity by allowing users to explore more
+            relevant meetup events.</p>
+
+          <h3>Future Outcomes and Testing</h3>
+          <p>I would like to revisit this project with an enhanced way of
+            testing user activity. From what I could tell from testing, the
+            prototype I presented didn’t have enough functionality to showcase
+            Meetup’s ability to find and browse events, which I believe would
+            lead to more appreciation of the social functions. I would also like
+            to test the prototypes with people who have more experience with
+            Meetup.com to see how well existing users would handle the
+            implementation of the improved social system.</p>
+
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <img src="./resources/meetupfooter.png" width="100%">
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="col-md-3"></div>
+      <a href="https://www.linkedin.com/in/miles-merwin-08a718bb/">
+        <div class="col-md-6" style="border:1px solid lightgrey; padding-top:10px; padding-bottom:10px; min-height:123px; margin-left:10px; margin-right:10px; margin-top:25px;">
+            <div class="col-xs-8"style="padding:15px; color:black"><h4>Miles Merwin | Professional Profile | LinkedIn</h4><h5>www.linkedin.com</h5></div>
+            <div class="col-xs-4 text-center" style="padding:2px; "><img src="./resources/profilelinkedin.jpg" width="100px" height="100px" style="border:1px solid lightgrey"></div>
+        </div>
+      </a>
+    </div>
+
+
+
+    </div>
+
+
+
+    <footer >
+    <div class="container-fluid bg-5">
+      <div class="row" style="padding-top:10px">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" style="text-align:center"><p style="color:white;">&copy;Miles Merwin 2017</p></div>
+
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.facebook.com/merwin.miles"><i class="fa fa-facebook-official" aria-hidden="true>"></i> Facebook</a></p></div>
+        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.github.com/lemurwin"><i class="fa fa-github" aria-hidden="true>"></i> Github</a></p></div>
+        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.instagram.com/godofsmiles"><i class="fa fa-instagram" aria-hidden="true>"></i> Instagram</a></p></div>
+          </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/"><i class="fa fa-linkedin" aria-hidden="true>"></i> LinkedIn</a></p></div>
+        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.twitter.com/godofsmiles"><i class="fa fa-twitter-square" aria-hidden="true>"></i> Twitter</a></p></div>
+        <div class="col-sm-2" style="text-align:center"><p><a href="https://merwinmiles.wordpress.com"><i class="fa fa-wordpress" aria-hidden="true"></i> Wordpress</a></p></div>
+
+      </div>
+    </div>
+    </footer>
+
 
 
 

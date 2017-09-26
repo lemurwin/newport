@@ -28,7 +28,7 @@ footer{
   margin-top:10px;
   padding-top:2px;
 }
-@media only screen and (min-width:992px) and (min-height:750px){
+@media only screen and (min-width:767px) and (min-height:750px){
   footer{
     position:fixed;
     bottom:0px;
@@ -40,6 +40,16 @@ body{
   font-family: 'Hind Vadodara', sans-serif;}
   #nav{
     padding:0px 30px;
+  }
+  @media only screen and (max-width:992px) {
+    footer p{
+      font-size: .75em;
+    }
+  }
+  .photo{
+    max-width: 400px;
+    margin:auto;
+    display:block;
   }
 </style>
 </head>
@@ -67,8 +77,8 @@ body{
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="./research.html">Meetup Research</a></li>
-                <li><a href="#">Placeholder</a></li>
+                <li><a href="./meetup.html">Springboard Capstone Project</a></li>
+
               </ul>
         </li>
 
@@ -78,10 +88,10 @@ body{
  </nav>
 </div>
 
-<div class="container" style="margin-top:50px">
+<div class="container-fluid" style="margin-top:50px">
   <h1>About</h1>
 
-<div class="row" style="margin-bottom:100px">
+<div class="row" style="margin-bottom:50px">
   <div class="col-sm-8">
     <blockquote>
     <p>My name is Miles, and I am a Designer living in San Jose, CA.</p>
@@ -117,7 +127,7 @@ body{
 
   </blockquote> -->
 </div>
-  <div class="col-sm-4"><img src="./resources/profile.jpg" class="img-rounded" alt="Miles" width="100%" max-height="100px"></div>
+  <div class="col-sm-4 photo text-center"><img src="./resources/profile.jpg" class="img-rounded " alt="Miles" width="100%"></div>
 
 </div>
 
@@ -150,29 +160,31 @@ body{
 </div>
 
 
-<footer style="margin-top:10px">
-<div class="container">
+<footer >
+<div class="container-fluid bg-5">
   <div class="row" style="padding-top:10px">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6" style="text-align:center"><p style="color:white;">&copy;Miles Merwin 2017</p></div>
 
-    <div class="col-sm-4" style="text-align:center"><p>&copy;Miles Merwin 2017</p></div>
-    <div class="col-sm-4"style="text-align:center"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/"><i class="fa fa-linkedin" aria-hidden="true>"></i> LinkedIn</a></p></div>
-    <div class="col-sm-4" style="text-align:center"><p><a href="https://www.facebook.com/merwin.miles"><i class="fa fa-facebook-official" aria-hidden="true>"></i> Facebook</a></p></div>
+
   </div>
 
   <div class="row">
-    <div class="col-sm-2"></div>
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-2" style="text-align:center"><p><a href="https://www.facebook.com/merwin.miles"><i class="fa fa-facebook-official" aria-hidden="true>"></i> Facebook</a></p></div>
     <div class="col-sm-2" style="text-align:center"><p><a href="https://www.github.com/lemurwin"><i class="fa fa-github" aria-hidden="true>"></i> Github</a></p></div>
     <div class="col-sm-2" style="text-align:center"><p><a href="https://www.instagram.com/godofsmiles"><i class="fa fa-instagram" aria-hidden="true>"></i> Instagram</a></p></div>
+      </div>
+
+
+  <div class="row">
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-2" style="text-align:center"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/"><i class="fa fa-linkedin" aria-hidden="true>"></i> LinkedIn</a></p></div>
     <div class="col-sm-2" style="text-align:center"><p><a href="https://www.twitter.com/godofsmiles"><i class="fa fa-twitter-square" aria-hidden="true>"></i> Twitter</a></p></div>
     <div class="col-sm-2" style="text-align:center"><p><a href="https://merwinmiles.wordpress.com"><i class="fa fa-wordpress" aria-hidden="true"></i> Wordpress</a></p></div>
 
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3"></div>
-
-
-    <div class="col-sm-3"></div>
   </div>
 </div>
 </footer>
