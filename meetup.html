@@ -8,7 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:600' rel='stylesheet' type='text/css'>
-    <script src="https://use.fontawesome.com/fbbc7a65d4.js"></script>
+
 
 
 
@@ -84,9 +84,14 @@ html{
         font-style:italic;
       }
       footer{
-        background-color:#222;
+
         margin-top:25px;
       }
+      footer a{
+        color:black;
+      }
+
+
       h2:before {
         display: block;
         content: " ";
@@ -105,6 +110,10 @@ html{
       @media only screen and (max-width:992px) {
         footer p{
           font-size: .75em;
+        }
+        #linkedin{
+          margin-left: 10px;
+          margin-right: 10px;
         }
 
       }
@@ -135,14 +144,8 @@ html{
         <ul class="nav navbar-nav navbar-right">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
-          <li class="dropdown active">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
-                <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="./meetup.html">Springboard Capstone Projecty</a></li>
+          <li class="dropdown active"><a href="./meetup.html">Meetup Case Study</a></li>
 
-                </ul>
-          </li>
 
         </ul>
         </div>
@@ -159,29 +162,29 @@ html{
 
                 <div class="col-md-2"></div>
                 <div class="col-md-6">
-                      <a data-toggle="collapse" href="#contents"><h3>Table of Contents</h3></a>
+                      <a data-toggle="collapse" href="#contents"><h3 id="tablecontents">Table of Contents<span class="caret"></span></h3></a>
                       <div class="row collapse" id="contents">
                       <ol type="I">
-                        <li>Introduction</li>
-                        <li>A Potential Solution</li>
-                        <li>Research</li>
+                        <a href="#introduction"><li>Introduction</li></a>
+                        <a href="#potentialsolution"><li>A Potential Solution</li></a>
+                        <a href="#Research"><li>Research</li></a>
                           <ol type="i">
-                            <li>Anonymous Survey</li>
-                            <li>Interviews</li>
-                            <li>Interview Takeaways</li>
+                            <a href="#Survey"><li>Anonymous Survey</li></a>
+                            <a href="#Interviews"><li>Interviews</li></a>
+                            <a href="#interviewtakeaway"><li>Interview Takeaways</li></a>
                           </ol>
-                        <li>Heuristic Analysis</li>
-                        <li>Empathy Maps, Personas, and User Stories</li>
-                        <li>Creating a Minimum Viable Product</li>
+                        <a href="#heuristics"><li>Heuristic Analysis</li></a>
+                        <a href="#Personas"><li>Empathy Maps, Personas, and User Stories</li></a>
+                        <a href="#LeanUX"><li>Creating a Minimum Viable Product</li></a>
 
-                        <li>Information Architecture and User Flows</li>
+                        <a href="#ContentStrategy"><li>Information Architecture and User Flows</li></a>
                           <ol type="i">
-                            <li>Card Sorting</li>
-                            <li>Site Map and User Flows</li>
+                            <a href="#cardsort"><li>Card Sorting</li></a>
+                            <a href="#sitemap"><li>Site Map and User Flows</li></a>
                           </ol>
-                        <li>Wireframes and Prototypes</li>
-                        <li>Testing the Prototype</li>
-                        <li>Conclusion and Takeaways</li>
+                        <a href="#Wireframes"><li>Wireframes and Prototypes</li></a>
+                        <a href="#Prototyping"><li>Testing the Prototype</li></a>
+                        <a href="#conclusion"><li>Conclusion and Takeaways</li></a>
                       </ol>
                     </div>
                   </div>
@@ -198,7 +201,7 @@ html{
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8"><h2>An Introduction to the Problem</h2>
+        <div class="col-md-8"><h2 id="introduction">An Introduction to the Problem</h2>
         </div>
       </div>
     </div>
@@ -268,7 +271,7 @@ html{
 <div class="container-fluid">
      <div class="row">
        <div class="col-md-2"></div>
-       <div class="col-md-8"><h2>A Potential Solution</h2>
+       <div class="col-md-8"><h2 id="potentialsolution">A Potential Solution</h2>
        </div>
      </div>
 
@@ -286,7 +289,7 @@ html{
      </div>
      <div class="row">
        <div class="col-md-2"></div>
-       <div class="col-md-8" id="Research"><h2>Research (Surveys and Interviews)</h2></div>
+       <div class="col-md-8" ><h2 id="Research">Research (Surveys and Interviews)</h2></div>
      </div>
      <div class="row">
        <div class="col-md-3"></div>
@@ -365,7 +368,7 @@ html{
             while the older respondent reported that she wouldn’t even connect with
             a person if she couldn’t vouch for his/her skill because she viewed the
             platform as a digital resumé.</p>
-      <h3>Interview Takeaways</h3>
+      <h3 id="interviewtakeaway">Interview Takeaways</h3>
         <p>When I explored the issues further, I found that
         all the interviewees used social networks as vetting tools when meeting
         someone new and needed some background information. Existing platforms
@@ -384,7 +387,7 @@ html{
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <h2>Heuristic Analysis</h2>
+        <h2 id="heuristics">Heuristic Analysis</h2>
       </div>
     </div>
 
@@ -429,14 +432,14 @@ html{
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <h2>Empathy Maps, Personas, and Scenarios</h2>
+        <h2 id="Personas">Empathy Maps, Personas, and Scenarios</h2>
       </div>
     </div>
 
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <h3 id="Personas">Differentiating Users</h3>
+        <h3 >Differentiating Users</h3>
       </div>
     </div>
 
@@ -538,7 +541,7 @@ html{
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-      <h3>Card Sorting for Clarity</h3>
+      <h3 id="cardsort">Card Sorting for Clarity</h3>
       <p>After deciding on the features for the MVP, I had to organize where
         each feature should reside on the platform. To create cards, I selected
         user stories and converted them into simple actions. Then, I used
@@ -548,7 +551,7 @@ html{
         was able to decide where each feature would be found.</p>
 
           <a data-toggle="modal" href="#cardsortmodal"><img src="./resources/cardsort.jpeg" width="100%"><h5 class="text-center">Card Sort</h5></a>
-        <h3>Creating the Sitemap and User Flows</h3>
+        <h3 id="sitemap">Creating the Sitemap and User Flows</h3>
         <p>Once I had my cards sorted, the sitemap came easily; I could
           immediately place the cards that everyone had agreed on, but for the
           cards where there had been disagreement, I based their locations on
@@ -836,7 +839,7 @@ html{
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <h2>Takeaways and Further Testing</h2></div>
+          <h2 id="conclusion">Takeaways and Further Testing</h2></div>
       </div>
       <div class="row">
         <div class="col-md-3"></div>
@@ -873,47 +876,57 @@ html{
       <div class="row">
       <div class="col-md-3"></div>
       <a href="https://www.linkedin.com/in/miles-merwin-08a718bb/">
-        <div class="col-md-6" style="border:1px solid lightgrey; padding-top:10px; padding-bottom:10px; min-height:123px; margin-left:10px; margin-right:10px; margin-top:25px;">
+        <div class="col-md-6" style="border:1px solid lightgrey; padding-top:10px; padding-bottom:10px; min-height:123px; margin-top:25px;" id="linkedin">
             <div class="col-xs-8"style="padding:15px; color:black"><h4>Miles Merwin | Professional Profile | LinkedIn</h4><h5>www.linkedin.com</h5></div>
             <div class="col-xs-4 text-center" style="padding:2px; "><img src="./resources/profilelinkedin.jpg" width="100px" height="100px" style="border:1px solid lightgrey"></div>
         </div>
       </a>
-    </div>
-
-
 
     </div>
-
-
-
-    <footer >
-    <div class="container-fluid bg-5">
-      <div class="row" style="padding-top:10px">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6" style="text-align:center"><p style="color:white;">&copy;Miles Merwin 2017</p></div>
-
-
       </div>
 
-      <div class="row">
 
-        <div class="col-sm-3"></div>
-        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.facebook.com/merwin.miles"><i class="fa fa-facebook-official" aria-hidden="true>"></i> Facebook</a></p></div>
-        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.github.com/lemurwin"><i class="fa fa-github" aria-hidden="true>"></i> Github</a></p></div>
-        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.instagram.com/godofsmiles"><i class="fa fa-instagram" aria-hidden="true>"></i> Instagram</a></p></div>
+
+
+
+
+
+
+      <footer style="padding-top:25px">
+      <div class="container-fluid text-center">
+
+        <div class="row">
+          <div class="col-sm-3">
           </div>
+          <div class="col-sm-6" style="border-bottom:1px solid black; margin-bottom:20px;">
+            </div>
+          </div>
+        <div class="row">
+
+          <div class="col-sm-3"></div>
+          <div class="col-sm-2"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/">LinkedIn</a></p></div>
+          <div class="col-sm-2"><p><a href="https://www.github.com/lemurwin">Github</a></p></div>
+          <div class="col-sm-2"><p><a href="https://www.instagram.com/godofsmiles">Instagram</a></p></div>
+            </div>
 
 
-      <div class="row">
+        <div class="row">
 
-        <div class="col-sm-3"></div>
-        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/"><i class="fa fa-linkedin" aria-hidden="true>"></i> LinkedIn</a></p></div>
-        <div class="col-sm-2" style="text-align:center"><p><a href="https://www.twitter.com/godofsmiles"><i class="fa fa-twitter-square" aria-hidden="true>"></i> Twitter</a></p></div>
-        <div class="col-sm-2" style="text-align:center"><p><a href="https://merwinmiles.wordpress.com"><i class="fa fa-wordpress" aria-hidden="true"></i> Wordpress</a></p></div>
+          <div class="col-sm-3"></div>
+          <div class="col-sm-2" ><p><a href="https://www.facebook.com/merwin.miles">Facebook</a></p></div>
+          <div class="col-sm-2"><p><a href="https://www.twitter.com/godofsmiles">Twitter</a></p></div>
+          <div class="col-sm-2"><p><a href="https://merwinmiles.wordpress.com">Wordpress</a></p></div>
 
+        </div>
+
+        <div class="row" style="padding-top:10px">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6" ><p style="color:black;">&copy;Miles Merwin 2017</p></div>
+
+
+        </div>
       </div>
-    </div>
-    </footer>
+      </footer>
 
 
 
