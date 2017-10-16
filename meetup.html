@@ -119,6 +119,16 @@ html{
         }
 
       }
+      @media only screen and (max-width:768px){
+        #icons{
+          width:50px;
+          height:50px;
+        }
+        p{
+          font-size:80%;
+        }
+      }
+
 
 
 
@@ -155,51 +165,65 @@ html{
    </nav>
   </div>
 
-  <div class="container-fluid" style="margin-top:50px">
-    <div class="row" style="background-color:white; padding-bottom:20px; padding-top:10px">
+
+
+
+  <div class="container-fluid" style="margin-top:50px; background-color:#ed1c40;">
+    <div class="row" style=" padding-bottom:20px; padding-top:10px">
       <div class="col-md-2"></div>
-    <div class="col-md-8"><h1 style="color:black">Meetup Case Study for Springboard UX Workshop</h1>
+      <div class="col-md-8"><h1 style="color:white">Meetup Case Study for Springboard UX Workshop</h1>
 
-      <p style="color:black">A Friendly Addition to Meetup.com</p></div>
-  </div>
+          <p style="color:white">A Friendly Addition to Meetup.com</p>
+      </div>
+    </div>
 
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                      <a data-toggle="collapse" href="#contents"><h3 id="tablecontents">Table of Contents<span class="caret"></span></h3></a>
-                      <div class="row collapse" id="contents">
-                      <ol type="I">
-                        <a href="#introduction"><li>Introduction</li></a>
-                        <a href="#potentialsolution"><li>A Potential Solution</li></a>
-                        <a href="#Research"><li>Research</li></a>
-                          <ol type="i">
-                            <a href="#Survey"><li>Anonymous Survey</li></a>
-                            <a href="#Interviews"><li>Interviews</li></a>
-                            <a href="#interviewtakeaway"><li>Interview Takeaways</li></a>
-                          </ol>
-                        <a href="#heuristics"><li>Heuristic Analysis</li></a>
-                        <a href="#Personas"><li>Empathy Maps, Personas, and User Stories</li></a>
-                        <a href="#LeanUX"><li>Creating a Minimum Viable Product</li></a>
 
-                        <a href="#ContentStrategy"><li>Information Architecture and User Flows</li></a>
-                          <ol type="i">
-                            <a href="#cardsort"><li>Card Sorting</li></a>
-                            <a href="#sitemap"><li>Site Map and User Flows</li></a>
-                          </ol>
-                        <a href="#Wireframes"><li>Wireframes and Prototypes</li></a>
-                        <a href="#Prototyping"><li>Testing the Prototype</li></a>
-                        <a href="#conclusion"><li>Conclusion and Takeaways</li></a>
-                      </ol>
-                    </div>
-                  </div>
+        <div class="row text-center">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
+            <h3 style="color:white; margin-top:-70px; padding-bottom:10px;">Included in this project:</h3>
+              <div class="col-xs-3" >
+
+                <a href="#Research" style="color:white"><img src="./resources/interviews.png" width="80px" height="80px" class="img-circle"id="icons">
+                <p>Research</p></a>
+                <a href="#Survey" style="color:white"><img src="./resources/survey.png" width="80px" height="80px" class="img-circle"id="icons">
+                <p>Survey</p></a>
+
               </div>
+
+              <div class="col-xs-3" >
+
+                <a href="#Personas" style="color:white"><img src="./resources/persona.png" width="80px" height="80px" class="img-circle"id="icons">
+                <p>Personas</p></a>
+                <a href="#ContentStrategy" style="color:white"><img src="./resources/contentstrat.png" width="80px" height="80px" class="img-circle"id="icons">
+                <p>IA</p></a>
+
+              </div>
+
+              <div class="col-xs-3" >
+
+                <a href="./meetup.html#LeanUX" style="color:white"><img src="./resources/leanux.png" width="80px" height="80px" class="img-circle"id="icons">
+                <p>Lean</p></a>
+                <a href="#Wireframes" style="color:white"><img src="./resources/wireframe.png" width="80px" height="80px" class="img-circle"id="icons">
+                <p>Wireframes</p></a>
+
+              </div>
+
+              <div class="col-xs-3">
+
+                <a href="#Prototyping" style="color:white"><img src="./resources/prototype.png" width="80px" height="80px" class="img-circle"id="icons">
+                <p> Prototypes</p></a>
+                <a href="#UserTesting" style="color:white"><img src="./resources/usertest.png" width="80px" height="80px" class="img-circle" id="icons">
+                <p >Testing</p></a>
+
+              </div>
+        </div>
+      </div>
 </div>
 
-  <div class="container-fluid text-center"style="padding-top:20px">
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8"><img src="./resources/meetup_small.png"width="100%" height="auto"></div>
-    </div>
-  </div>
+
+
+
 
     <div class="container-fluid">
       <div class="row">
@@ -209,6 +233,16 @@ html{
       </div>
     </div>
 
+<!--
+    <div class="container-fluid text-center"style="padding-top:20px">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8"><img src="./resources/meetup_small.png"width="100%" height="auto"></div>
+      </div>
+    </div>
+
+  -->
+
 
 
 
@@ -217,25 +251,26 @@ html{
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-    <p>Meetup.com is a popular platform for finding and attending events near you.
-      People use it to deepen their professional skills, explore personal interests,
-      and generally to socialize with people nearby that have similar interests.</p>
+            <p>Meetup.com is a popular platform for finding and attending events near you.
+              People use it to deepen their professional skills, explore personal interests,
+              and generally to socialize with people nearby that have similar interests.</p>
 
-        <p>Meetup’s tagline is <em>“Find your people”</em>, which I have done, however, after
-          attending a few of these events, I realized that there isn’t a great way to
-          stay connected to the people I meet at events. There <em>is</em> a minimal messaging system,
-          but in order to connect with someone on a social network,
-          I would have to remember their name or remember to get a
-          business card. </p>
-        <p>If I fail at either, (which is likely to happen after meeting 20+ people)
-        I could check the RSVP list on the event page on Meetup (easy, usually 25–30 people),
-           but if that person didn’t RSVP, I would have to browse the member list (difficult,
-           sometimes 1000+ members).</p>
-       <p>Once I succeeded at getting a name, I would then have to find them on
-         Facebook and go through the process of adding them to the right list to
-         hide personal information, or finding them on LinkedIn, where the UI is
-         frightful and you are prompted at every other screen to connect with
-         someone from your email contact list.</p>
+            <p>Meetup’s tagline is <em>“Find your people”</em>, which I have done, however, after
+              attending a few of these events, I realized that there isn’t a great way to
+              stay connected to the people I meet at events. There <em>is</em> a minimal messaging system,
+              but in order to connect with someone on a social network,
+              I would have to remember their name or remember to get a
+              business card. </p>
+
+              <p>If I fail at either, (which is likely to happen after meeting 20+ people)
+              I could check the RSVP list on the event page on Meetup (easy, usually 25–30 people),
+                 but if that person didn’t RSVP, I would have to browse the member list (difficult,
+                 sometimes 1000+ members).</p>
+             <p>Once I succeeded at getting a name, I would then have to find them on
+               Facebook and go through the process of adding them to the right list to
+               hide personal information, or finding them on LinkedIn, where the UI is
+               frightful and you are prompted at every other screen to connect with
+               someone from your email contact list.</p>
        </div>
      </div>
 </div>
@@ -754,7 +789,7 @@ html{
               </div>
 
               <div class="modal-body text-center" >
-                <p><a href="https://invis.io/E7D2EVJMN" target="prototypeframe"><button type="button">Click Here</button></a> to load prototype.</p>
+                <p><a href="https://invis.io/E7D2EVJMN" target="prototypeframe"><button type="button">Click Here</button></a> to load prototype. (Not Mobile Friendly)</p>
                 <iframe name="prototypeframe" width="100%" height="600px"></iframe>
 
               </div>
@@ -872,7 +907,7 @@ html{
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          <img src="./resources/meetupfooter.png" width="100%">
+          <img src="./resources/meetup_small.png" width="100%">
         </div>
       </div>
 
