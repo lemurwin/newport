@@ -15,12 +15,52 @@
 
 
   <script>
+  $(document).ready(function(){
+  // Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .not('[href="#contents"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+});
 
   </script>
   <style>
 html{
   font-size:16px;
 }
+
   body{
     font-size:1.2em;
     font-family: 'Hind Vadodara', sans-serif;}
@@ -33,6 +73,7 @@ html{
     h2{
       font-weight:600;
       border-bottom:1px solid black;
+
     }
     h3{
       font-weight:600;
@@ -43,6 +84,9 @@ html{
       font-weight:300;
       line-height: 1.6;
       padding-bottom:10px;
+    }
+    #tableContents a{
+      color:white
     }
     @media only screen and (min-width:992px) {
       .modal-image{
@@ -93,12 +137,19 @@ html{
         color:black;
       }
 
+      h1:before {
+        display: block;
+        content: " ";
+        margin-top: -82px;
+        height: 82px;
+        visibility: hidden;
+      }
 
       h2:before {
         display: block;
         content: " ";
-        margin-top: -50px;
-        height: 50px;
+        margin-top: -55px;
+        height: 55px;
         visibility: hidden;
       }
 
@@ -109,6 +160,15 @@ html{
         height: 50px;
         visibility: hidden;
       }
+      .backtotop{
+        padding: 0px;
+        padding-bottom: -46px;
+        font-size:.7em;
+        margin-top:30px;
+        color:black;
+
+
+      }
       @media only screen and (max-width:992px) {
         footer p{
           font-size: .75em;
@@ -117,6 +177,12 @@ html{
           margin-left: 10px;
           margin-right: 10px;
         }
+        .backtotop{
+          padding: 0px;
+          padding-bottom: -46px;
+          font-size:.7em;
+          margin-top:0px;
+          text-align: right;
 
       }
       @media only screen and (max-width:768px){
@@ -126,6 +192,9 @@ html{
         }
         p{
           font-size:80%;
+        }
+
+
         }
       }
 
@@ -169,56 +238,45 @@ html{
 
 
   <div class="container-fluid" style="margin-top:50px; background-color:#ed1c40;">
-    <div class="row" style=" padding-bottom:20px; padding-top:10px">
+    <div class="row" style=" padding-bottom:0px; padding-top:10px">
       <div class="col-md-2"></div>
-      <div class="col-md-8"><h1 style="color:white">Meetup Case Study for Springboard UX Workshop</h1>
+      <div class="col-md-8"><h1 style="color:white" id="top">Meetup Case Study for Springboard UX Workshop</h1>
 
           <p style="color:white">A Friendly Addition to Meetup.com</p>
       </div>
+
     </div>
+    <div class="row" style="padding-bottom:20px;" id="tableContents">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+              <a data-toggle="collapse" href="#contents"><h3 id="tablecontents">Table of Contents<span class="caret"></span></h3></a>
+              <div class="row collapse" id="contents">
+              <ol type="I">
+                <a href="#introduction"><li>Introduction</li></a>
+                <a href="#potentialsolution"><li>A Potential Solution</li></a>
+                <a href="#Research"><li>Research</li></a>
+                  <ol type="i">
+                    <a href="#Survey"><li>Anonymous Survey</li></a>
+                    <a href="#Interviews"><li>Interviews</li></a>
+                    <a href="#interviewtakeaway"><li>Interview Takeaways</li></a>
+                  </ol>
+                <a href="#heuristics"><li>Heuristic Analysis</li></a>
+                <a href="#Personas"><li>Empathy Maps, Personas, and User Stories</li></a>
+                <a href="#LeanUX"><li>Creating a Minimum Viable Product</li></a>
 
-
-        <div class="row text-center">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-10">
-            <h3 style="color:white; margin-top:-70px; padding-bottom:10px;">Included in this project:</h3>
-              <div class="col-xs-3" >
-
-                <a href="#Research" style="color:white"><img src="./resources/interviews.png" width="80px" height="80px" class="img-circle"id="icons">
-                <p>Research</p></a>
-                <a href="#Survey" style="color:white"><img src="./resources/survey.png" width="80px" height="80px" class="img-circle"id="icons">
-                <p>Survey</p></a>
-
-              </div>
-
-              <div class="col-xs-3" >
-
-                <a href="#Personas" style="color:white"><img src="./resources/persona.png" width="80px" height="80px" class="img-circle"id="icons">
-                <p>Personas</p></a>
-                <a href="#ContentStrategy" style="color:white"><img src="./resources/contentstrat.png" width="80px" height="80px" class="img-circle"id="icons">
-                <p>IA</p></a>
-
-              </div>
-
-              <div class="col-xs-3" >
-
-                <a href="./meetup.html#LeanUX" style="color:white"><img src="./resources/leanux.png" width="80px" height="80px" class="img-circle"id="icons">
-                <p>Lean</p></a>
-                <a href="#Wireframes" style="color:white"><img src="./resources/wireframe.png" width="80px" height="80px" class="img-circle"id="icons">
-                <p>Wireframes</p></a>
-
-              </div>
-
-              <div class="col-xs-3">
-
-                <a href="#Prototyping" style="color:white"><img src="./resources/prototype.png" width="80px" height="80px" class="img-circle"id="icons">
-                <p> Prototypes</p></a>
-                <a href="#UserTesting" style="color:white"><img src="./resources/usertest.png" width="80px" height="80px" class="img-circle" id="icons">
-                <p >Testing</p></a>
-
-              </div>
-        </div>
+                <a href="#ContentStrategy"><li>Information Architecture and User Flows</li></a>
+                  <ol type="i">
+                    <a href="#cardsort"><li>Card Sorting</li></a>
+                    <a href="#sitemap"><li>Site Map and User Flows</li></a>
+                  </ol>
+                <a href="#Wireframes"><li>Wireframes and Prototypes</li></a>
+                <a href="#Prototyping"><li>Testing the Prototype</li></a>
+                <a href="#conclusion"><li>Conclusion and Takeaways</li></a>
+              </ol>
+            </div>
+          </div>
       </div>
+
 </div>
 
 
@@ -228,7 +286,9 @@ html{
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8"><h2 id="introduction">An Introduction to the Problem</h2>
+
+          <div class="col-md-8"><h2 id="introduction">An Introduction to the Problem</h2></div>
+          <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
         </div>
       </div>
     </div>
@@ -310,7 +370,9 @@ html{
      <div class="row">
        <div class="col-md-2"></div>
        <div class="col-md-8"><h2 id="potentialsolution">A Potential Solution</h2>
+
        </div>
+       <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
      </div>
 
      <div class="row">
@@ -328,6 +390,7 @@ html{
      <div class="row">
        <div class="col-md-2"></div>
        <div class="col-md-8" ><h2 id="Research">Research (Surveys and Interviews)</h2></div>
+       <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
      </div>
      <div class="row">
        <div class="col-md-3"></div>
@@ -427,6 +490,7 @@ html{
       <div class="col-md-8">
         <h2 id="heuristics">Heuristic Analysis</h2>
       </div>
+      <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -472,6 +536,7 @@ html{
       <div class="col-md-8">
         <h2 id="Personas">Empathy Maps, Personas, and Scenarios</h2>
       </div>
+      <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -537,6 +602,7 @@ html{
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8"><h2 id="LeanUX">A Minimum Viable Product</h2></div>
+      <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -573,7 +639,9 @@ html{
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <h2 id="ContentStrategy">Information Architecture and User Flows</h2>
+
         </div>
+          <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -627,6 +695,7 @@ html{
         <div class="col-md-8">
           <a href="#sitemapmodal" data-toggle="modal"><img src="./resources/sitemap.png" width="100%" style="border:1px solid black"><h5 class="text-center">Site Map</h5>
         </div></a>
+
     </div>
 
     <div id="sitemapmodal" class="modal fade" role="dialog">
@@ -698,13 +767,14 @@ html{
 <div class="container-fluid">
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8"><h2>Wireframes and Prototypes</h2></div>
+        <div class="col-md-8"><h2 id="Wireframes">Wireframes and Prototypes</h2></div>
+        <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
       </div>
 
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-          <h3 id="Wireframes">Initial Wireframes</h3>
+          <h3 >Initial Wireframes</h3>
           <p>Because Meetup already has a basic profile, I started designing
             from the existing layout to facilitate a smooth transition and site
             homogeneity.</p>
@@ -822,6 +892,7 @@ html{
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8"><h2 id="UserTesting">Testing the Prototype</h2></div>
+    <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
   </div>
 
   <div class="row">
@@ -878,6 +949,7 @@ html{
         <div class="col-md-2"></div>
         <div class="col-md-8">
           <h2 id="conclusion">Takeaways and Further Testing</h2></div>
+          <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
       </div>
       <div class="row">
         <div class="col-md-3"></div>
@@ -942,18 +1014,18 @@ html{
         <div class="row">
 
           <div class="col-sm-3"></div>
-          <div class="col-sm-2"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/">LinkedIn</a></p></div>
-          <div class="col-sm-2"><p><a href="https://www.github.com/lemurwin">Github</a></p></div>
-          <div class="col-sm-2"><p><a href="https://www.instagram.com/godofsmiles">Instagram</a></p></div>
+          <div class="col-sm-2"><p><a href="https://www.linkedin.com/in/miles-merwin-08a718bb/" target="_blank">LinkedIn</a></p></div>
+          <div class="col-sm-2"><p><a href="https://www.github.com/lemurwin" target="_blank">Github</a></p></div>
+          <div class="col-sm-2"><p><a href="https://www.instagram.com/godofsmiles" target="_blank">Instagram</a></p></div>
             </div>
 
 
         <div class="row">
 
           <div class="col-sm-3"></div>
-          <div class="col-sm-2" ><p><a href="https://www.facebook.com/merwin.miles">Facebook</a></p></div>
-          <div class="col-sm-2"><p><a href="https://www.twitter.com/godofsmiles">Twitter</a></p></div>
-          <div class="col-sm-2"><p><a href="https://merwinmiles.wordpress.com">Wordpress</a></p></div>
+          <div class="col-sm-2" ><p><a href="https://www.facebook.com/merwin.miles" target="_blank">Facebook</a></p></div>
+          <div class="col-sm-2"><p><a href="https://www.twitter.com/godofsmiles" target="_blank">Twitter</a></p></div>
+          <div class="col-sm-2"><p><a href="https://merwinmiles.wordpress.com" target="_blank">Wordpress</a></p></div>
 
         </div>
 
