@@ -21,7 +21,29 @@
 
 </script>
 
+<script>
+$(document).ready(function(){
+  $('#fun').click(function(){
+    $('#meow').get(0).play();
+    $('#funexplode').fadeIn(0, function(){
+      $(this).delay(400).fadeOut('fast');
+      });
+    });
+  });
+  </script>
+
+
 <style>
+#funexplode{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  display:none;
+  background: url('./resources/kitty.jpg') center 0px no-repeat fixed;
+
+}
 html{
   font-size:16px;
 }
@@ -73,6 +95,10 @@ body{
       width:44%;
     }
   }
+
+  /* trying to get my responsive screen sizes just right */
+
+
   @media only screen and (max-width:384px){
 
     h3{
@@ -138,14 +164,21 @@ body{
           <div class="col-sm-3"></div>
           <div class="col-sm-6 about" >
 
-            <h3 class="text-center" style="padding-bottom:20px;" id="first"><b>My name is Miles, and I am a UX Designer in San Jose, CA.</b></h3>
-            <p>I have held positions in sales, social work, auto mechanics,
-               social media, and psychology, and use this wide range of
-            knowledge to bring meaningful insights to web and mobile platforms.</p>
-            <p>
+              <h3 class="text-center" style="padding-bottom:20px;" id="first">
+              <b>My name is Miles, and I am a UX Designer in San Jose, CA.</b></h3>
 
-            <p>My hobbies include building and flying drones, track days, martial arts, tinkering, and airsoft.</p>
-        </div>
+              <p>I enjoy creating intuitive and meaningful
+                experiences for people from all walks of life.</p>
+
+              <p>I consider myself a jack-of-all-trades with experience in
+                clinical psychology, social work, auto mechanics, social media, and sales.</p>
+
+              <p>I am interested in <b>Information Architecture</b>, <b>User
+                Research</b>, and <b>UI Design</b>.</p>
+
+              <p>In my free time, I enjoy building and flying drones, track
+                days, martial arts, tinkering, and airsoft.</p>
+          </div>
         </div>
 
     <div class="row">
@@ -260,7 +293,7 @@ body{
       <li> Lynda - UXD Learning Path, Front End Developer Learning Path</li>
     </ul>
   </div> -->
-
+<div><audio id="meow" src="./resources/meow.mp3" type="audio/mpeg"></audio>
 </div>
 
 <footer style="margin-top:25px">
@@ -299,4 +332,6 @@ body{
   </div>
 </div>
 </footer>
+<div id="funexplode"><audio id="meow" src="./resources/meow.mp3" type="audio/mp3"></audio></div>
+<div id="fun" style="position:fixed; bottom:10px; right:10px; width:30px; height:30px; ">&Omega;</div>
 </div>
