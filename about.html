@@ -35,6 +35,7 @@ $(document).ready(function(){
 
 
 <style>
+
 #funexplode{
   position:fixed;
   top:0px;
@@ -43,7 +44,6 @@ $(document).ready(function(){
   height:100%;
   display:none;
   background: url('./resources/kitty.jpg') center 0px no-repeat fixed;
-
 }
 
 #fun{
@@ -70,11 +70,8 @@ footer a{
   color:black;
 }
 
-
 h3{
   font-weight:bold;
-
-
 }
 
 .fullscreen {
@@ -85,18 +82,23 @@ h3{
   right: 0;
   overflow: auto;
   background-color:rgba(255, 255, 255, 0.6);
-
 }
+
 body{
   font-size:1.2em;
   font-family: 'Hind Vadodara', sans-serif;
 }
-  #nav{
-    padding:0px 30px;
-  }
 
-  p{
-    line-height: 1.8;
+#nav{
+  padding:0px 30px;
+}
+
+p{
+  line-height: 1.8;
+}
+
+.col-xs-6 p{
+  line-height: 1;
   }
 
   @media only screen and (max-width:600px) {
@@ -117,19 +119,15 @@ body{
 
   @media only screen and (max-width:384px){
 
-
-
   }
+
   @media only screen and (min-width:1000px){
-    h3{
-      min-height: 52px;
-    }
 
   }
 
-@media only screen and (min-width:1200px){
+  @media only screen and (min-width:1200px){
 
-}
+  }
 
 
 </style>
@@ -210,37 +208,15 @@ body{
                 <div class="col-sm-6"><a href="mailto:merwin.miles@gmail.com"><button type="button" class="btn btn-info btn-block text-center"><h4>Email Me!</h4></button></a></div>
 -->
           </div>
+        </div>
 
-          <div class="col-sm-3">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-9">
-              <div class="skills text-center">
-            <h3 class="">Software</h3>
 
-              <li>Sketch</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-              <li>Adobe XD</li>
-              <li>Invision</li>
 
-            <h3 class="">Deliverables</h3>
+    <div class="row text-center skills" style="line-height:1;">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
 
-              <li>Surveys</li>
-              <li>Research</li>
-              <li>Personas</li>
-              <li>Wireframes</li>
-              <li>Prototypes</li>
-              <li>User Testing</li>
-            </div>
-          </div>
-
-          </div>
-
-    <div class="row text-center">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
-        <div class="col-xs-2"></div>
-          <div class="col-xs-4">
+          <div class="col-xs-6">
             <h3 class="">Software</h3>
 
               <p>Sketch</p>
@@ -248,15 +224,9 @@ body{
               <p>Illustrator</p>
               <p>Adobe XD</p>
               <p>Invision</p>
-
-
-
-
-
           </div>
 
-
-          <div class="col-xs-4">
+          <div class="col-xs-6">
             <h3 class="">Deliverables</h3>
 
               <p>Surveys</p>
@@ -266,26 +236,24 @@ body{
               <p>Prototypes</p>
               <p>User Testing</p >
           </div>
-
-            <!--
-                      <div class="col-xs-4">
-                        <h3 class=" text-center">Languages &amp; Libraries</h3>
-                        <ul>
-                          <li>HTML &amp; CSS</li>
-                          <li>Javascript</li>
-                          <li>Bootstrap</li>
-                          <li>JQuery</li>
-                          <li>React</li>
-                          <li>Ruby on Rails</li>
-                        </ul>
-
-                      </div>
-            -->
-      </div>
-
+                </div>
   </div>
-
 </div>
+
+<!--
+          <div class="col-xs-4">
+            <h3 class=" text-center">Languages &amp; Libraries</h3>
+            <ul>
+              <li>HTML &amp; CSS</li>
+              <li>Javascript</li>
+              <li>Bootstrap</li>
+              <li>JQuery</li>
+              <li>React</li>
+              <li>Ruby on Rails</li>
+            </ul>
+
+          </div>
+-->
 
 <!--
 <div class="container-fluid">
@@ -348,7 +316,7 @@ body{
       <li> Lynda - UXD Learning Path, Front End Developer Learning Path</li>
     </ul>
   </div> -->
-<div><audio id="meow" src="./resources/meow.mp3" type="audio/mpeg"></audio>
+<div>
 </div>
 
 <footer style="margin-top:25px">

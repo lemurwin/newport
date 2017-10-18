@@ -17,12 +17,8 @@
   <script>
   $(document).ready(function(){
   // Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .not('[href="#contents"]')
-  .click(function(event) {
+
+  $('.hashscroll').click(function(event) {
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
@@ -258,26 +254,26 @@ html{
               <a data-toggle="collapse" href="#contents"><h3 id="tablecontents">Table of Contents<span class="caret"></span></h3></a>
               <div class="row collapse" id="contents">
               <ol type="I">
-                <a href="#introduction"><li>Introduction</li></a>
-                <a href="#potentialsolution"><li>A Potential Solution</li></a>
-                <a href="#Research"><li>Research</li></a>
+                <a href="#introduction"class="hashscroll"><li>Introduction</li></a>
+                <a href="#potentialsolution"class="hashscroll"><li>A Potential Solution</li></a>
+                <a href="#Research" class="hashscroll"><li>Research</li></a>
                   <ol type="i">
-                    <a href="#Survey"><li>Anonymous Survey</li></a>
-                    <a href="#Interviews"><li>Interviews</li></a>
-                    <a href="#interviewtakeaway"><li>Interview Takeaways</li></a>
+                    <a href="#Survey"class="hashscroll"><li>Anonymous Survey</li></a>
+                    <a href="#Interviews"class="hashscroll"><li>Interviews</li></a>
+                    <a href="#interviewtakeaway"class="hashscroll"><li>Interview Takeaways</li></a>
                   </ol>
-                <a href="#heuristics"><li>Heuristic Analysis</li></a>
-                <a href="#Personas"><li>Empathy Maps, Personas, and User Stories</li></a>
-                <a href="#LeanUX"><li>Creating a Minimum Viable Product</li></a>
+                <a href="#heuristics"class="hashscroll"><li>Heuristic Analysis</li></a>
+                <a href="#Personas"class="hashscroll"><li>Empathy Maps, Personas, and User Stories</li></a>
+                <a href="#LeanUX"class="hashscroll"><li>Creating a Minimum Viable Product</li></a>
 
-                <a href="#ContentStrategy"><li>Information Architecture and User Flows</li></a>
+                <a href="#ContentStrategy"class="hashscroll"><li>Information Architecture and User Flows</li></a>
                   <ol type="i">
-                    <a href="#cardsort"><li>Card Sorting</li></a>
-                    <a href="#sitemap"><li>Site Map and User Flows</li></a>
+                    <a href="#cardsort"class="hashscroll"><li>Card Sorting</li></a>
+                    <a href="#sitemap"class="hashscroll"><li>Site Map and User Flows</li></a>
                   </ol>
-                <a href="#Wireframes"><li>Wireframes and Prototypes</li></a>
-                <a href="#Prototyping"><li>Testing the Prototype</li></a>
-                <a href="#conclusion"><li>Conclusion and Takeaways</li></a>
+                <a href="#Wireframes"class="hashscroll"><li>Wireframes and Prototypes</li></a>
+                <a href="#Prototyping"class="hashscroll"><li>Testing the Prototype</li></a>
+                <a href="#conclusion"class="hashscroll"><li>Conclusion and Takeaways</li></a>
               </ol>
             </div>
           </div>
@@ -294,7 +290,7 @@ html{
         <div class="col-md-2"></div>
 
           <div class="col-md-8"><h2 id="introduction">An Introduction to the Problem</h2></div>
-          <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+          <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
         </div>
       </div>
     </div>
@@ -378,7 +374,7 @@ html{
        <div class="col-md-8"><h2 id="potentialsolution">A Potential Solution</h2>
 
        </div>
-       <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+       <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
      </div>
 
      <div class="row">
@@ -396,7 +392,7 @@ html{
      <div class="row">
        <div class="col-md-2"></div>
        <div class="col-md-8" ><h2 id="Research">Research (Surveys and Interviews)</h2></div>
-       <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+       <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
      </div>
      <div class="row">
        <div class="col-md-3"></div>
@@ -496,7 +492,7 @@ html{
       <div class="col-md-8">
         <h2 id="heuristics">Heuristic Analysis</h2>
       </div>
-      <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+      <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -543,7 +539,7 @@ html{
         <h2 id="Personas">Empathy Maps, Personas, and Scenarios</h2>
       </div>
 
-      <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+      <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -609,7 +605,7 @@ html{
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8"><h2 id="LeanUX">A Minimum Viable Product</h2></div>
-      <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+      <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -648,7 +644,7 @@ html{
         <h2 id="ContentStrategy">Information Architecture and User Flows</h2>
 
         </div>
-          <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+          <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
     </div>
 
     <div class="row">
@@ -775,7 +771,7 @@ html{
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8"><h2 id="Wireframes">Wireframes and Prototypes</h2></div>
-        <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+        <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
       </div>
 
       <div class="row">
@@ -832,7 +828,7 @@ html{
             Interests, and a Bulletin Board. This resulted in a cleaner,
             easily navigable layout that doesn’t distract the user’s eye.</p>
 
-          <h3 id="Prototyping">Building a Prototype</h3>
+          <h3 >Building a Prototype</h3>
           <p>Because this project was based on an existing platform, I was able
             to streamline much of the process by using screenshots of the
             existing platform and photoshopping in some of the features. Once
@@ -879,8 +875,8 @@ html{
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-2"></div>
-    <div class="col-md-8"><h2 id="UserTesting">Testing the Prototype</h2></div>
-    <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+    <div class="col-md-8"><h2 id="Prototyping">Testing the Prototype</h2></div>
+    <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
   </div>
 
   <div class="row">
@@ -937,7 +933,7 @@ html{
         <div class="col-md-2"></div>
         <div class="col-md-8">
           <h2 id="conclusion">Takeaways and Further Testing</h2></div>
-          <div class="col-md-2"><a href="#top"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
+          <div class="col-md-2"><a href="#top" class="hashscroll"><p class="backtotop">Back To Top  <span class="glyphicon glyphicon-triangle-top"></span></p></a></div>
       </div>
       <div class="row">
         <div class="col-md-3"></div>
