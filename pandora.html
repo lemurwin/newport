@@ -94,8 +94,8 @@ html{
         visibility: hidden;
       }
       @media only screen and (max-width:992px) {
-        footer p{
-          font-size: .75em;
+        p{
+          font-size: .85em;
         }
         #linkedin{
           margin-left: 10px;
@@ -154,8 +154,8 @@ html{
 
   <div class="container-fluid" style="margin-top:50px; background-color:#386aff;">
     <div class="row" style=" padding-bottom:20px; padding-top:10px">
-      <div class="col-md-2"></div>
-      <div class="col-md-8"><h1 style="color:white">Pandora Landscape UI Redesign</h1>
+
+      <div class="col-sm-8 col-sm-offset-2"><h1 style="color:white">Pandora Landscape UI Redesign</h1>
 
 
       </div>
@@ -168,94 +168,141 @@ html{
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8"><h2 id="introduction">Introduction</h2>
+        <div class="col-sm-8 col-sm-offset-2"><h2 id="introduction">Introduction</h2>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+
+        <div class="col-sm-6 col-sm-offset-3">
           <p>I love Pandora Internet Radio. You can type in any artist, song, or
             genre and it will stream a playlist of songs that it thinks you will
             enjoy. I mainly use Pandora at home or at work, but rarely in my
-            car. I found this strange at first, but I realized that most of my
+            car. </p><p>I found this strange at first, but I realized that most of my
             mobile usage in the car is in landscape orientation, mostly utilizing
             navigation, and with the phone at a further distance away than regular
             use.</p>
           <p>The problem with this is that Pandora's landscape UI is not very useful
             like this. It is merely a "fluid" application (rearragement of existing UI elements)
-            of the UI, but I believe it would add a level of
+            of the UI. However, I believe it would add
             functionality to the app if the Landscape orientation would provide
             a different interface than the default screen.</p>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-sm-8 col-sm-offset-2">
             <h2 id="heuristics">Usability and Heuristic Analysis</h2>
           </div>
+        </div>
+
+        <div class="row">
 
 
-          <div class="col-md-6 col-md-offset-3">
+          <div class="col-sm-6 col-sm-offset-3">
             <p>My main concern with the landscape layout is that the controls
-              and information are too small to be viewed and used at a distance.
+              and information are too small to be <em>viewed</em> and <em>used</em> at a distance.
               Indeed, the size and function of the UI is largely the same in portrait
-              orientation as in landscape, which does not lend itself to easy
-              information retrieval. Lists are the same height, and the viewport for
-            selecting new and existing radio stations shows less information than it does
-            in portrait orientation. </p>
+              orientation as in landscape. Lists are the same height, and the viewport for
+              selecting new and existing radio stations is able to display less information than it does
+              in portrait orientation. </p>
 
             <p>The way the phone is being interacted with is important as well.
-              By that, I mean that how the phone is used in-car is generally suspended in midair, rather
+              By that, I mean that when used in-car, it is generally suspended on a mount rather
               than being held in the hand of the user. This is important because
               cradling the phone grants the ability to anchor your movement, allowing the use
               of smaller icons. When the phone is in midair, targets that were previously simple
               to hit become much more difficult.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 text-center">
+              <a data-toggle="modal" href="#spacingmodal" style="text-decoration:none; color:#333"><img src="./resources/pandora/buttons.png" width="100%">
+            <h5>Button Spacing Decrease in Landscape Orientation</h5></a>
+
+                      <div id="spacingmodal" class="modal fade" role="dialog">
+                        <div class="modal-image" style="">
+
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <div class="modal-body text-center">
+                              <p>Card Sort Results</p>
+                              <a href="./resources/buttons.png"><img src="./resources/pandora/buttons.png" width="100%"></a>
+
+                            </div>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-sm-6 col-sm-offset-3">
 
             <p>The standard touch input of smartphones
-              are already extremely sensitive to jostling and bumping.
+              is already extremely sensitive to jostling and bumping.
               If you've ever tried to adjust the radio while driving, you know that
               drivers are already prone to making many errors with input due to
               bumps and distractions. Because the buttons are so
               close together and small, any jostling in the car will almost certainly
               result in an incorrect input. To top it off, the control buttons for playback
-            are actually <em>closer</em> together in landscape than in portrait orientation.</p>
+              are actually <em>closer</em> together in landscape than in portrait orientation.</p>
 
 
-            </div>
+          </div>
+        </div>
 
-
-            <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
               <h2 id="Brainstorming">Brainstorming Solutions</h2>
             </div>
-
-            <div class="col-md-6 col-md-offset-3">
-              <p>My initial impulse was to make the buttons larger, and thus easier to
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <p>My initial impulse was to increase the button target size, and thus easier to
                 see and touch without causing errors. However, I experienced a touch
-                screen car radio that attempted to use this paradigm and I realized that
+                screen car radio that attempted to use this paradigm and I observed that
                 touchscreen buttons without a physical sense to indicate where the
-                user's hand position is poor design philosophy - there is no tactile feedback
+                user's hand position is extremely prone to mistakes. There is no tactile feedback
                 for whether what the user is doing has been accomplished or not.</p>
-              <p>To counter this, I decided that a gestural input would provide
+              <div class="text-center">  <img src="./resources/pandora/bigbuttons.jpg" width="100%"><h5>Wireframe of Larger Buttons</h5></div>
+              <p>To counter this, I thought that a gestural input would provide
                 a better experience. By adding swipe controls for the main functions,
-                we could turn what was once a micro-movement,
-                (movements requiring a high level of accuracy) into a macro- movement,
-                an action is easily accomplished in an environment where accuracy
-                is not always available.
+                we could turn what was once a micro-movement
+                (movements requiring a high level of accuracy) into a macro-movement,
+                an action that is easily accomplished in an environment where accuracy
+                is not always possible.
               </p>
-          </div>
+              <div class="text-center"><img src="./resources/pandora/touch.jpg" width="100%"><h5>Wireframe of Touch Input</h5>
+              </div>
+            </div>
+      </div>
 
-          <div class="row">
+      <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h2>Prototyping</h2>
+            </div>
+          
+      </div>
 
-            <div class="col-md-6 col-md-offset-3">
-              <p>
+
+      <div class="row">
+          <div class="row-sm-6 col-sm-offset-3">
+            <p>
 
 
 
-          </div>
-
-    </div>
+          </div><!-- Row end -->
+        </div><!-- Container End -->
 
 
 
